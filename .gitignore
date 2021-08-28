@@ -1,0 +1,13 @@
+# Dotfiles
+.git
+.DS_Store
+
+# Neovim
+plugin
+
+# SSH keys
+github*
+known_hosts
+
+# VCS
+*.lock.json

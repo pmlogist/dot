@@ -1,0 +1,4 @@
+#!/usr/bin/env osascript
+on run argv
+tell application id "tracesOf.Uebersicht" to refresh widget id (item 1 of argv)
+end run

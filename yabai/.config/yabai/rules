@@ -1,0 +1,71 @@
+#!/usr/bin/env sh
+
+# Apps
+yabai -m rule --add app="^(AdGuard)$" manage=off;
+yabai -m rule --add app="^(Adobe Photoshop 2020)$" opacity=1.0;
+yabai -m rule --add app="^(Adobe Photoshop 2021)$" opacity=1.0;
+yabai -m rule --add app="^(Adobe Lighroom Classic)$" opacity=1.0;
+yabai -m rule --add app="^(Activity Monitor|Мониторинг системы)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(App Store)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(Archive Utility|Утилита архивирования)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(Bitwarden)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(Cascadea)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(Calculator|Калькулятор)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(Calendar|Календарь)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(CleanMyMac X)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(ColorWell)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(DeSmuME)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(Disk Utility|Дисковая утилита)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(Docker Desktop)$" manage=off;
+yabai -m rule --add app="^(EPSON XP-540 Series)$" manage=off;
+yabai -m rule --add app="^(Finder)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(Figma)$" opacity=1.0;
+yabai -m rule --add app="^(Firefox)$" opacity=1.0;
+yabai -m rule --add app="^(Font Book|Шрифты)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(Flume)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(Grids)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(Hackintool)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(HandBrake)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(Insomnia)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(Installer*|Установщик)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(Logic Pro)$" opacity=1.0;
+yabai -m rule --add app="^(Mail|Почта)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(Maps|Карты)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(Messages|Сообщения)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(Microsoft Edge)$" opacity=1.0;
+yabai -m rule --add app="^(mGBA)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(MTGA)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(mpv)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(Notes|Заметки)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(Music|Музыка)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(Paw)$" manage=off opacity=1.0
+yabai -m rule --add app="^(Pixelmator Pro)$" manage=off opacity=1.0
+yabai -m rule --add app="^(Photos|Фото)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(Polarr Photo Editor)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(Preview|Просмотр)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(Postico)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(QuickTime Player)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(Radio Silence)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(Reminders|Напоминания)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(Safari)$" opacity=1.0
+yabai -m rule --add app="^(Spotify)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(System Information|Информация о системе)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(System Preferences|Системные настройки)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(Streamlink Twitch GUI)$" opacity=1.0;
+yabai -m rule --add app="^(TablePlus)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(TextEdit)$" manage=off;
+yabai -m rule --add app="^(Voice Memos)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(The Unarchiver)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(Transmission)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(VK Messenger)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(Yandex)$" opacity=1.0;
+
+# Toggle floating for some managed applications
+safari_windows="^(Расширения|Основные)$"
+yabai -m rule --add app="^(Safari)$" manage=off title="${safari_windows}"
+
+# WebStorm
+webstorm_windows='^(Add File to Git|Copy|Welcome to WebStorm|Delete|Preferences|Keyboard Shortcut|Mouse Shortcut|Rename|Move|Prettier|Usages Detected|Update|Plugins)$'
+yabai -m rule --add app="WebStorm" title="${webstorm_windows}" manage=off
+yabai -m rule --add app="WebStorm" opacity=1.0
+

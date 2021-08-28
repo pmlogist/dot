@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+
+USER="$(whoami)"
+
+if [[ ! brew ]]; then
+    echo "Installing brew"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+else
+    echo "Homebrew already installed"
+fi
+
+# For Big Sur 
+# sudo visudo -f /private/etc/sudoers.d/yabai
+# $USER ALL = (root) NOPASSWD: /usr/local/bin/yabai --load-sa
+
+echo "Installing brew packages..."
+brew bundle

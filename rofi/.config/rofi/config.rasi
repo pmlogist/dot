@@ -1,0 +1,8 @@
+configuration {
+  theme: "nord";
+  font: "iosevka 12";
+  width: 33;
+  icon-theme: "Papirus";
+  show-icons: true;
+  dpi: 120;
+ }

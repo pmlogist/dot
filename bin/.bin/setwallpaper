@@ -1,0 +1,23 @@
+#!/usr/bin/env osascript
+
+tell application "System Events"
+	tell appearance preferences
+		
+		if (not dark mode) then
+			tell application "System Events"
+				tell every desktop
+					set picture to "~/.dot/wallpapers/day.jpg"
+				end tell
+			end tell
+		else
+			tell application "System Events"
+				tell every desktop
+					set picture to "~/.dot/wallpapers/day.jpg"
+				end tell
+			end tell
+		end if
+		
+	end tell
+	
+end tell
+
