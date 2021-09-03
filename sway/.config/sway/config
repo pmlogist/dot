@@ -28,7 +28,7 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 output eDP-1 {
   #bg $HOME/downloads/4371396.jpg fill
   subpixel rgb
-  scale 1.25
+  #scale 1.25
 }
 #
 # Example configuration:
@@ -49,6 +49,7 @@ output eDP-1 {
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
+
 
 ### Input configuration
 #
@@ -181,7 +182,15 @@ output eDP-1 {
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
     bindsym $mod+minus scratchpad show
-#
+
+    bindsym XF86AudioMute exec amixer sset Master toggle
+    bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -10%
+    bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +10%
+    bindsym XF86AudioMicMute exec amixer sset Capture toggle
+    bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
+    bindsym XF86MonBrightnessUp exec brightnessctl s 10%+
+
+
 # Resizing containers:
 #
 mode "resize" {
@@ -206,25 +215,15 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-#
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
-#bar {
-#    position top
-#
-#    # When the status_command prints a new line to stdout, swaybar updates.
-#    # The default just shows the current date and time.
-#    status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
-#
-#    colors {
-#        statusline #ffffff
-#        background #323232
-#        inactive_workspace #32323200 #32323200 #5c5c5c
-#    }
-#}
+bar {
+   # Run waybar
+	 swaybar_command waybar 
+}
 
-default_border pixel 4
+default_border pixel 3
 gaps inner 10
+gaps top 3
+
+exec autotiling
 
 include /etc/sway/config.d/*

@@ -2,9 +2,9 @@
   "React Functional Component": {
     "prefix": "rfc",
     "body": [
-      "export interface ${TM_FILENAME_BASE}Props { $1 }",
+      "interface ${TM_FILENAME_BASE}Props { $1 }",
       "",
-      "export const ${TM_FILENAME_BASE}: React.FC<${TM_FILENAME_BASE}Props> = (props) => {",
+      "const ${TM_FILENAME_BASE}: React.FC<${TM_FILENAME_BASE}Props> = (props) => {",
       "    return (",
       "        $0",
       "    )",
@@ -12,6 +12,19 @@
       "",
       "export default ${TM_FILENAME_BASE};"
     ],
-    "description": "Create a React Function Component"
+    "description": "Create a default exported React function component"
+  },
+  "React Functional Component Export": {
+    "prefix": "rfce",
+    "body": [
+      "interface ${TM_FILENAME_BASE}Props { $1 }",
+      "",
+      "export const ${TM_FILENAME_BASE}: React.FC<${TM_FILENAME_BASE}Props> = (props) => {",
+      "    return (",
+      "        $0",
+      "    )",
+      "};"
+    ],
+    "description": "Create a named export React function component"
   }
 }

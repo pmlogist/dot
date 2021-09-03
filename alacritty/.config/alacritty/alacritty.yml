@@ -11,7 +11,7 @@ font:
   bold_italic:
     family: Iosevka
     style: Bold Italic
-  size: 10
+  size: 12
 colors:
   primary:
     background: '#161821'
