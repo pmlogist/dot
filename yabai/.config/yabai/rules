@@ -13,6 +13,7 @@ yabai -m rule --add app="^(Cascadea)$" manage=off opacity=1.0;
 yabai -m rule --add app="^(Calculator|Калькулятор)$" manage=off opacity=1.0;
 yabai -m rule --add app="^(Calendar|Календарь)$" manage=off opacity=1.0;
 yabai -m rule --add app="^(CleanMyMac X)$" manage=off opacity=1.0;
+yabai -m rule --add app="^(Chromium)$" opacity=1.0
 yabai -m rule --add app="^(ColorWell)$" manage=off opacity=1.0;
 yabai -m rule --add app="^(DeSmuME)$" manage=off opacity=1.0;
 yabai -m rule --add app="^(Disk Utility|Дисковая утилита)$" manage=off opacity=1.0;

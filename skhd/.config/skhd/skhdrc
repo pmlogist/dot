@@ -1,13 +1,14 @@
 #!/usr/bin/env sh
 
 # iterm2
-shift + alt - return : "${HOME}"/.config/yabai/scripts/open_iterm2.sh
+#shift + alt - return : "${HOME}"/.config/yabai/scripts/open_iterm2.sh
 
 # kitty
-# shift + alt - return : /Applications/Kitty.app/Contents/MacOS/kitty \
-#     --single-instance \
-#     --listen-on unix:/tmp/mykitty \
-#     -d ~
+ shift + alt - return : /Applications/Kitty.app/Contents/MacOS/kitty \
+     --single-instance \
+     --listen-on unix:/tmp/mykitty \
+     -c ${HOME}/.config/kitty/kitty_macos.conf \
+     -d ~
 
 alt - return : yabai -m window --swap west # swap with "main" tile by simply swap it west
 

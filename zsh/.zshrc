@@ -36,6 +36,15 @@ antibody bundle sindresorhus/pure
 alias reload="source $HOME/.zshrc"
 alias bu="brew update"
 alias buu="brew upgrade"
-alias ls="ls --color=auto"
-alias ll="ls -laG"
 alias vimconfig="$EDITOR ~/.config/nvim"
+
+case `uname` in
+  Darwin)
+    alias ls="ls -G"
+    alias ll="ls -la"
+  ;;
+  Linux)
+    alias ls="ls --color=auto"
+    alias ll="ls -la"
+  ;;
+esac
