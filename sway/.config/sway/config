@@ -28,7 +28,6 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 output eDP-1 {
   #bg $HOME/downloads/4371396.jpg fill
   subpixel rgb
-  #scale 1.25
 }
 #
 # Example configuration:

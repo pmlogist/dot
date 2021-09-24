@@ -9,12 +9,13 @@ HISTFILE=~/.zsh_history
 
 export LANG=en_US.UTF-8
 export EDITOR="nvim"
-export GOPATH="$HOME/.go"
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --no-ignore-vcs \
   -g "!{.git,.cache,.next,build,dist,node_modules}" \
   -g "!{package-lock.json}"';
 
 eval "$(pyenv init -)"
+
+export NNN_PLUG='f:finder;o:fzopen;p:mocplay;d:diffs;t:nmount;v:imgview'
 
 typeset -U PATH path
 path=( 
@@ -24,8 +25,10 @@ path=(
   $HOME/.cargo/bin
   $path 
 )
+
+export GOPATH=$HOME/.go
 export N_PREFIX="$HOME/.n/bin"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
-export PATH="$N_PREFIX/bin:$PATH"
+export PATH="$PATH:$N_PREFIX/bin:$GOROOT/bin:$GOPATH/bin:$HOME/.bin"
 
 antibody bundle zsh-users/zsh-autosuggestions 
 antibody bundle zdharma/fast-syntax-highlighting
@@ -48,3 +51,15 @@ case `uname` in
     alias ll="ls -la"
   ;;
 esac
+
+autoload -Uz compinit 
+if [[ -n ${ZDOTDIR}/.zcompdump(#qN.mh+24) ]]; then
+	compinit;
+else
+	compinit -C;
+fi;
+
+
+export XKB_DEFAULT_LAYOUT=us,ru
+export XKB_DEFAULT_VARIANT=altgr-intl
+#export XKB_DEFAULT_OPTIONS=compose:menu,level3:ralt_switch

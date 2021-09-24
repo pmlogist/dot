@@ -1,0 +1,9 @@
+#!/usr/bin/python3
+import os
+
+def theme_set(theme):
+    gtk_theme=f"gsettings set org.gnome.desktop.interface gtk-theme '{theme}' " 
+    os.system(gtk_theme)
+
+theme_set("Nordic")
+

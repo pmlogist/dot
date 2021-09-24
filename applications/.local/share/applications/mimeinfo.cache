@@ -1,0 +1,17 @@
+[MIME Cache]
+application/json=firefox.desktop;
+application/pdf=firefox.desktop;microsoft-edge-beta.desktop;
+application/rdf+xml=microsoft-edge-beta.desktop;
+application/rss+xml=microsoft-edge-beta.desktop;
+application/x-xpinstall=firefox.desktop;
+application/xhtml+xml=firefox.desktop;microsoft-edge-beta.desktop;
+application/xhtml_xml=microsoft-edge-beta.desktop;
+application/xml=microsoft-edge-beta.desktop;
+image/gif=microsoft-edge-beta.desktop;
+image/jpeg=microsoft-edge-beta.desktop;
+image/png=microsoft-edge-beta.desktop;
+image/webp=microsoft-edge-beta.desktop;
+text/html=firefox.desktop;microsoft-edge-beta.desktop;
+text/xml=firefox.desktop;microsoft-edge-beta.desktop;
+x-scheme-handler/http=firefox.desktop;microsoft-edge-beta.desktop;
+x-scheme-handler/https=firefox.desktop;microsoft-edge-beta.desktop;
