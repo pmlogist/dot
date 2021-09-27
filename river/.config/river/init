@@ -128,14 +128,10 @@ do
     riverctl map $mode None XF86Eject spawn 'eject -T'
 
     # Control pulse audio volume with pamixer (https://github.com/cdemoulins/pamixer)
-    #riverctl map $mode None XF86AudioRaiseVolume  spawn 'pamixer -i 5'
-    #riverctl map $mode None XF86AudioLowerVolume  spawn 'pamixer -d 5'
-    #riverctl map $mode None XF86AudioMute         spawn 'pamixer --toggle-mute'
-    #riverctl map $mode None XF86AudioMicMute spawn 'pamixer --default-source -t'
-    riverctl map $mode None XF86AudioRaiseVolume  spawn 'amixer sset Master 5%+'
-    riverctl map $mode None XF86AudioLowerVolume  spawn 'amixer sset Master 5%-'
-    riverctl map $mode None XF86AudioMute         spawn 'amixer sset Master toggle'
-    riverctl map $mode None XF86AudioMicMute      spawn 'amixer sset Capture toggle'
+    riverctl map $mode None XF86AudioRaiseVolume  spawn 'pamixer -i 5'
+    riverctl map $mode None XF86AudioLowerVolume  spawn 'pamixer -d 5'
+    riverctl map $mode None XF86AudioMute         spawn 'pamixer --toggle-mute'
+    riverctl map $mode None XF86AudioMicMute spawn 'pamixer --default-source -t'
 
     # Control MPRIS aware media players with playerctl (https://github.com/altdesktop/playerctl)
     riverctl map $mode None XF86AudioMedia spawn 'playerctl play-pause'
@@ -177,9 +173,17 @@ riverctl map normal $mod bracketright focus-output next
 riverctl map normal $mod+Shift bracketleft send-to-output previous
 riverctl map normal $mod+Shift bracketright send-to-output next
 riverctl float-filter-add app-id "pavucontrol"
+riverctl float-filter-add title "Firefox —  Sharing Indicator"
+riverctl map normal None Print spawn "slurp | grim -g - $(xdg-user-dir PICTURES)/$(date +'screenshot_%Y-%m-%d-%H%M%S.png')"
+riverctl map normal Mod4+Shift P spawn nautilus
 
 riverctl focus-follows-cursor disabled
 
 exec foot --server &
 exec kanshi &
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY &
+exec hash dbus-update-activation-environment 2>/dev/null && \
+     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY &
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+exec waybar &
 exec rivertile
