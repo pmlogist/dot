@@ -40,6 +40,7 @@ alias reload="source $HOME/.zshrc"
 alias bu="brew update"
 alias buu="brew upgrade"
 alias vimconfig="$EDITOR ~/.config/nvim"
+alias screenshare="/usr/lib/xdg-desktop-portal-wlr -l DEBUG"
 
 case `uname` in
   Darwin)
@@ -59,7 +60,3 @@ else
 	compinit -C;
 fi;
 
-
-export XKB_DEFAULT_LAYOUT=us,ru
-export XKB_DEFAULT_VARIANT=altgr-intl
-#export XKB_DEFAULT_OPTIONS=compose:menu,level3:ralt_switch
