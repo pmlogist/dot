@@ -4,6 +4,6 @@ import os
 wm="river"
 
 def startup():
-    os.system(f"exec {wm}")
+    os.system(f"XKB_DEFAULT_LAYOUT=us XKB_DEFAULT_VARIANT=altgr-intl {wm}")
 
 startup()
