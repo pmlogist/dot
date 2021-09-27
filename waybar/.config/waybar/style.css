@@ -10,8 +10,7 @@
 
 window#waybar {
   background-color: #121517;
-  opacity: 0.99;
-  color: #dddfe4;
+  color: #bfc6cb;
   transition-property: background-color;
   transition-duration: 0.5s;
 }
@@ -37,6 +36,10 @@ window#waybar.hidden {
   margin: 0 2px;
 }
 
+#tags button:hover {
+  background-color: transparent;
+}
+
 #tags button.occupied {
   color: #828e98;
 }
@@ -46,10 +49,33 @@ window#waybar.hidden {
   box-shadow: inset 0 -1px #cca161;
 }
 
-#battery {
-  padding: 0 8px;
+#mpd {
+  margin-right: 12px;
 }
 
 #network {
-  padding: 0 10px;
+  margin-right: 12px;
+}
+
+#pulseaudio {
+  margin-right: 12px;
+}
+
+#cpu {
+  margin-right: 12px;
+}
+
+#memory {
+  margin-right: 12px;
+}
+
+#battery {
+  margin-right: 12px;
+}
+#battery.full {
+  color: #abc36f;
+}
+
+#clock {
+  margin-right: 12px;
 }
