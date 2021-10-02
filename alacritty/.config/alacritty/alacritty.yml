@@ -13,32 +13,34 @@ font:
     style: Bold Italic
   size: 12
 colors:
+  # COLORSCHEME: vitaliya-light.yml
+  # Default colors
   primary:
-    background: "#1B1F22"
-    foreground: "#DDE1E4"
+    background: '#E8EBED'
+    foreground: '#1B1F22'
   normal:
-    black: "#828E98"
-    red: "#D16A61"
-    green: "#A3BD61"
-    yellow: "#CCA161"
-    blue: "#60A6D2"
-    magenta: "#CA88D3"
-    cyan: "#55B499"
-    white: "#BFC6CB"
+    black: '#2D3439'
+    red: '#9C3530'
+    green: '#648433'
+    yellow: '#997333'
+    blue: '#2273B5'
+    magenta: '#A12FB1'
+    cyan: '#2C907E'
+    white: '#2D3439'
   bright:
-    black: "#6b7089"
-    red: "#D67971"
-    green: "#ABC36F"
-    yellow: "#D2AD74"
-    blue: "#70AFD7"
-    magenta: "#CB88D3"
-    cyan: "#90C1E0"
-    white: "#DDE1E4"
+    black: '#2D3439'
+    red: '#D67971'
+    green: '#ABC36F'
+    yellow: '#D2AD74'
+    blue: '#70AFD7'
+    magenta: '#CB88D3'
+    cyan: '#90C1E0'
+    white: '#DDE1E4'
 cursor:
   style:
     shape: Block
     blinking: Always
 key_bindings:
-  - key: "N"
+  - key: N
     mods: Command
     action: SpawnNewInstance

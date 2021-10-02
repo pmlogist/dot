@@ -1,0 +1,24 @@
+# Colors (Iceberg Dark)
+colors:
+  # Default colors
+  primary:
+    background: "#1B1F22"
+    foreground: "#DDE1E4"
+  normal:
+    black: "#828e98"
+    red: "#d16a61"
+    green: "#a3bd61"
+    yellow: "#cca161"
+    blue: "#60a6d2"
+    magenta: "#ca88d3"
+    cyan: "#55b499"
+    white: "#bfc6cb"
+  bright:
+    black: "#6b7089"
+    red: "#D67971"
+    green: "#ABC36F"
+    yellow: "#D2AD74"
+    blue: "#70AFD7"
+    magenta: "#CB88D3"
+    cyan: "#90C1E0"
+    white: "#DDE1E4"
