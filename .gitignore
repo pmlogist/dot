@@ -8,6 +8,8 @@ plugin
 # SSH keys
 github*
 known_hosts
+./ssh/.ssh/config
+
 
 # VCS
 *.lock.json
