@@ -4,10 +4,10 @@
     // Choose the order of the modules
     "modules-left": ["river/tags"],
     "modules-center": ["mpd"],
-    "modules-right": ["pulseaudio", "network", "cpu", "memory", "battery", "clock", "tray"],
+    "modules-right": ["tray", "pulseaudio", "network", "cpu", "memory", "battery", "clock"],
     "river/tags": {
       "num-tags": 9,
-      "tag-labels": ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"]
+      "tag-labels": ["О", "Д", "Т", "Ч", "П", "Ш", "С", "В", "Д"]
     },
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ",

@@ -2,8 +2,8 @@
   border: none;
   border-radius: 0;
   /* `otf-font-awesome` is required to be installed for icons */
-  font-family: Iosevka, Roboto, Helvetica, Arial, "Font Awesome 5 Free",
-    sans-serif;
+  font-family: "SF Pro", Iosevka, Roboto, Helvetica, Arial,
+    "Font Awesome 5 Free", sans-serif;
   font-size: 14px;
   min-height: 28px;
 }
@@ -50,32 +50,36 @@ window#waybar.hidden {
 }
 
 #mpd {
-  margin-right: 12px;
+  margin-right: 8px;
+}
+
+#tray {
+  margin-right: 8px;
 }
 
 #network {
-  margin-right: 12px;
+  margin-right: 8px;
 }
 
 #pulseaudio {
-  margin-right: 12px;
+  margin-right: 8px;
 }
 
 #cpu {
-  margin-right: 12px;
+  margin-right: 8px;
 }
 
 #memory {
-  margin-right: 12px;
+  margin-right: 8px;
 }
 
 #battery {
-  margin-right: 12px;
+  margin-right: 8px;
 }
 #battery.full {
   color: #abc36f;
 }
 
 #clock {
-  margin-right: 12px;
+  margin-right: 8px;
 }
