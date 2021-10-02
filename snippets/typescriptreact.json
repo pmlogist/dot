@@ -19,13 +19,17 @@
   "React Functional Component Export": {
     "prefix": "rfce",
     "body": [
-      "interface ${TM_FILENAME_BASE}Props { $1 }",
+      "import React from 'react'",
       "",
-      "export const ${TM_FILENAME_BASE}: React.FC<${TM_FILENAME_BASE}Props> = (props) => {",
+      "interface I${TM_FILENAME_BASE}Props {$1}",
+      "",
+      "export function ${TM_FILENAME_BASE}(props: I${TM_FILENAME_BASE}Props) {",
       "    return (",
       "        $0",
       "    )",
-      "};"
+      "};",
+      "",
+      "export default ${TM_FILENAME_BASE};"
     ],
     "description": "Create a named export React function component"
   }
