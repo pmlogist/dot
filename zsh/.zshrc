@@ -28,7 +28,7 @@ path=(
 
 export GOPATH=$HOME/.go
 export N_PREFIX="$HOME/.n/bin"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
-export PATH="$PATH:$N_PREFIX/bin:$GOROOT/bin:$GOPATH/bin:$HOME/.bin"
+export PATH="$PATH:$N_PREFIX/bin:$GOROOT/bin:$GOPATH/bin:$HOME/.bin:$HOME/.config/composer/vendor/bin"
 
 antibody bundle zsh-users/zsh-autosuggestions 
 antibody bundle zdharma/fast-syntax-highlighting
