@@ -1,17 +1,59 @@
 #!/usr/bin/env sh
 
-USER="$(whoami)"
+case `uname` in
+  Darwin)
+    USER="$(whoami)"
 
-if [[ ! brew ]]; then
-    echo "Installing brew"
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-else
-    echo "Homebrew already installed"
-fi
+    if [[ ! brew ]]; then
+        echo "Installing brew"
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    else
+        echo "Homebrew already installed"
+    fi
 
-# For Big Sur 
-# sudo visudo -f /private/etc/sudoers.d/yabai
-# $USER ALL = (root) NOPASSWD: /usr/local/bin/yabai --load-sa
+    # For Big Sur 
+    # sudo visudo -f /private/etc/sudoers.d/yabai
+    # $USER ALL = (root) NOPASSWD: /usr/local/bin/yabai --load-sa
 
-echo "Installing brew packages..."
-brew bundle
+    echo "Installing brew packages...":
+    brew bundle
+  ;;
+  Linux)
+    mkdir $HOME/.config;
+    mkdir $HOME/.vsnip;
+    mkdir $HOME/Workspace;
+    mkdir -p $HOME/Workspace/enclosure $HOME/Workspace/hnktt;
+
+    git clone git@github.com:hnktt/adinoka $HOME/Workspace/hnktt/adinoka;
+
+    stow alacritty;
+    stow applications;
+    stow awesome;
+    stow bin;
+    stow chromium;
+    stow foot;
+    stow git;
+    stow gtk;
+    stow kanshi;
+    stow mpd;
+    stow mpv;
+    stow neofetch;
+    stow picom;
+    stow ranger;
+    stow river;
+    stow rofi;
+    stow snippets -t $HOME/.vsnip;
+    #stow ssh;
+    #stow starship;
+    stow sway;
+    stow swaylock;
+    stow tmux;
+    stow users-dirs;
+    stow wallpapers;
+    stow waybar;
+    stow yambar;
+    stow zsh;
+    #stow vscode #!
+  ;;
+esac
+

@@ -146,9 +146,10 @@ do
 done
 
 # Set background and border color
-riverctl background-color 0x1B1F22
-riverctl border-color-focused 0x828e98
-riverctl border-color-unfocused 0x121517
+riverctl background-color 0x131416ff
+riverctl border-color-focused 0x81A2BEff
+riverctl border-color-unfocused 0x303336ff
+riverctl border-width 1
 
 # Set repeat rate
 riverctl set-repeat 50 300
@@ -187,4 +188,8 @@ exec hash dbus-update-activation-environment 2>/dev/null && \
      dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY &
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 exec waybar &
+exec swayidle -w \
+    timeout 300 'swaylock -f' \
+    timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+    before-sleep 'swaylock -f' &
 exec rivertile

@@ -3,14 +3,14 @@
     // "width": 1280, // Waybar width
     // Choose the order of the modules
     "modules-left": ["river/tags"],
-    "modules-center": ["mpd"],
-    "modules-right": ["tray", "pulseaudio", "network", "cpu", "memory", "battery", "clock"],
+    "modules-center": ["mpd", "tray"],
+    "modules-right": ["pulseaudio", "network", "cpu", "memory", "battery", "clock"],
     "river/tags": {
       "num-tags": 9,
       "tag-labels": ["О", "Д", "Т", "Ч", "П", "Ш", "С", "В", "Д"]
     },
     "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ",
+        "format": "{stateIcon}",
         "format-disconnected": "Disconnected ",
         "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
         "unknown-tag": "N/A",
@@ -19,7 +19,7 @@
             "on": " "
         },
         "random-icons": {
-            "off": "<span color=\"#f53c3c\"></span> ",
+            "off": "<span color=\"#f53c3c\"></span>",
             "on": " "
         },
         "repeat-icons": {
@@ -32,7 +32,7 @@
             "paused": "",
             "playing": ""
         },
-        "tooltip-format": "test {randomIcon}",
+        "tooltip-format": "{artist} - {album} - {title} | {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}",
         "tooltip-format-disconnected": "MPD (disconnected)"
     },
     "idle_inhibitor": {

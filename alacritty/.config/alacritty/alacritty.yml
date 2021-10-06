@@ -13,22 +13,22 @@ font:
     style: Bold Italic
   size: 12
 colors:
-  # COLORSCHEME: vitaliya-light.yml
+  # COLORSCHEME: /home/hnktt/.config/alacritty/themes/vitaliya.yml
   # Default colors
   primary:
-    background: '#E8EBED'
-    foreground: '#1B1F22'
+    background: '#1B1F22'
+    foreground: '#DDE1E4'
   normal:
-    black: '#2D3439'
-    red: '#9C3530'
-    green: '#648433'
-    yellow: '#997333'
-    blue: '#2273B5'
-    magenta: '#A12FB1'
-    cyan: '#2C907E'
-    white: '#2D3439'
+    black: '#828e98'
+    red: '#d16a61'
+    green: '#a3bd61'
+    yellow: '#cca161'
+    blue: '#60a6d2'
+    magenta: '#ca88d3'
+    cyan: '#55b499'
+    white: '#bfc6cb'
   bright:
-    black: '#2D3439'
+    black: '#6b7089'
     red: '#D67971'
     green: '#ABC36F'
     yellow: '#D2AD74'
