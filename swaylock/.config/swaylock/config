@@ -9,6 +9,7 @@ datestr=%a, %e of %B
 image=$HOME/Pics/screenlock.png
 
 fade-in=0.2
+grace=15
 
 #effect-blur=30x2
 #effect-greyscale
