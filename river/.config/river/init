@@ -14,12 +14,12 @@ touchpad="1739:0:Synaptics_TM3276-022"
 
 # Mod+Shift+Return to start an instance of foot (https://codeberg.org/dnkl/foot)
 #riverctl map normal $mod+Shift Return spawn footclient
-riverctl map normal $mod+Shift Return spawn footclient
+# riverctl map normal $mod+Shift Return spawn footclient
+riverctl map normal $mod+Shift Return spawn 'kitty --single-instance'
 
 # Mod+Q to close the focused view
 riverctl map normal $mod Q close
 riverctl map normal $mod P spawn 'wofi --show drun'
-riverctl map normal $mod F spawn 'nautilus'
 
 #server server server  Mod+E to exit river
 riverctl map normal $mod+Shift E exit
@@ -177,7 +177,7 @@ riverctl map normal $mod+Shift bracketright send-to-output next
 riverctl float-filter-add app-id "pavucontrol"
 riverctl float-filter-add title "Firefox —  Sharing Indicator"
 riverctl map normal None Print spawn "slurp | grim -g - $(xdg-user-dir PICTURES)/$(date +'screenshot_%F-%T.png')"
-riverctl map normal Mod4+Shift P spawn nautilus
+riverctl map normal $mod+Shift P spawn nemo
 
 riverctl focus-follows-cursor disabled
 
@@ -187,7 +187,7 @@ exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY &
 exec hash dbus-update-activation-environment 2>/dev/null && \
      dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY &
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-exec mako & 
+# exec mako & 
 exec waybar &
 exec swayidle -w \
     timeout 600 'swaylock' \

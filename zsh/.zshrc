@@ -35,7 +35,7 @@ antibody bundle zsh-users/zsh-autosuggestions
 antibody bundle zdharma/fast-syntax-highlighting
 antibody bundle zdharma/history-search-multi-word
 antibody bundle mafredri/zsh-async
-antibody bundle sindresorhus/pure
+# antibody bundle sindresorhus/pure
 
 alias reload="source $HOME/.zshrc"
 alias bu="brew update"
@@ -61,3 +61,4 @@ else
 	compinit -C;
 fi;
 
+eval "$(starship init zsh)"

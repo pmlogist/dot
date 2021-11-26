@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Figma (Chromium)
+StartupWMClass=figma
+Comment=Figma
+GenericName=Internet Messenger
+Exec=chromium --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-features=WebRTCPipeWireCapturer --app=https://figma.com
+Icon=figma
+Type=Application
+Categories=Network;
+Path=/usr/bin
