@@ -15,7 +15,8 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 #set $term alacritty
-set $term "kitty --config ~/.config/kitty/kitty.conf --single-instance"
+# set $term "kitty --config ~/.config/kitty/kitty.conf --single-instance"
+set $term foot
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -72,10 +73,10 @@ output eDP-1 {
 # Basics:
 #
     # Start a terminal
-    bindsym $mod+Return exec $term
+    bindsym $mod+Shift+Return exec $term
 
     # Kill focused window
-    bindsym $mod+Shift+q kill
+    bindsym $mod+q kill
 
     # Start your launcher
     bindsym $mod+d exec $menu
@@ -224,7 +225,9 @@ default_border pixel 2
 gaps outer 12
 gaps inner 6
 
-exec autotiling
-exec swaybg -i $HOME/.dot/wallpapers/macos_monterey_night.jpg -m fill
+exec foot --server
+exec kanshi
+exec mako
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 include /etc/sway/config.d/*
