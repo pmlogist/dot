@@ -1,11 +1,13 @@
 {
-    "height": 28, 
-    "modules-left": ["sway/workspaces"],
-    "modules-center": ["tray"],
+    "height": 28, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    // Choose the order of the modules
+    "modules-left": ["river/tags"],
+    "modules-center": ["mpd", "tray"],
     "modules-right": ["pulseaudio", "network", "cpu", "memory", "battery", "clock"],
     "river/tags": {
-        "num-tags": 9,
-        "tag-labels": ["О", "Д", "Т", "Ч", "П", "Ш", "С", "В", "Д"]
+      "num-tags": 9,
+      "tag-labels": ["О", "Д", "Т", "Ч", "П", "Ш", "С", "В", "Д"]
     },
     "mpd": {
         "format": "{stateIcon}",
@@ -41,9 +43,11 @@
         }
     },
     "tray": {
+        // "icon-size": 21,
         "spacing": 10
     },
     "clock": {
+        // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
@@ -56,7 +60,7 @@
     },
     "battery": {
         "states": {
-            "good": 95,
+            // "good": 95,
             "warning": 30,
             "critical": 15
         },
@@ -64,9 +68,12 @@
         "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
     "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "",
         "format-ethernet": "",
         "format-linked": "{ifname} (No IP) ",
@@ -75,6 +82,7 @@
         "tooltip": false
     },
     "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
         "format": "{icon}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
@@ -101,6 +109,7 @@
             "default": "🎜"
         },
         "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     }
 }
