@@ -32,8 +32,8 @@ export PATH="$PATH:$N_PREFIX/bin:$GOROOT/bin:$GOPATH/bin:$HOME/.bin:$HOME/.confi
 export PATH="/home/hnktt/.deno/bin:$PATH"
 
 antibody bundle zsh-users/zsh-autosuggestions 
-antibody bundle zdharma/fast-syntax-highlighting
-antibody bundle zdharma/history-search-multi-word
+antibody bundle zdharma-continuum/fast-syntax-highlighting
+antibody bundle robobenklein/zdharma-history-search-multi-word
 antibody bundle mafredri/zsh-async
 # antibody bundle sindresorhus/pure
 
@@ -62,3 +62,4 @@ else
 fi;
 
 eval "$(starship init zsh)"
+export PATH=/usr/local/opt/openjdk@11/bin:$PATH

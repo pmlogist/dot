@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 import os
 
-wm="river"
+wm="sway"
 
 def startup():
-    os.system(f"XKB_DEFAULT_LAYOUT=us XKB_DEFAULT_VARIANT=altgr-intl XDG_CURRENT_DESKTOP=Unity {wm}")
+    os.system(f"XKB_DEFAULT_LAYOUT=us XKB_DEFAULT_VARIANT=altgr-intl XDG_CURRENT_DESKTOP=sway {wm}")
 
 startup()
